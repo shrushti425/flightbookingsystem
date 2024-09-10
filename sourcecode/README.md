@@ -1,10 +1,8 @@
-# ✈️ Airline Ticket Booking System 🛫
-
-Welcome to the **Airline Ticket Booking System**! This project simulates an online airline ticket reservation system where users can sign up, log in, book tickets, select destinations, choose dates, and receive a boarding pass. This README explains the **technical details** of each part of the project. 
+# ✈️ Airline Ticket Booking System 🛫 
 
 ---
 
-## 🚀 Project Overview
+## 🗓️ Timeline
 
 This is a **solo project** split into four parts:
 
@@ -14,6 +12,7 @@ This is a **solo project** split into four parts:
 - **Part 4**: Ticket Printing and Boarding Pass Generation (Deadline: 30th Sept)
 
 ---
+## 🔧 Tech Perspectives
 
 ## 🧩 Part 1: Welcome and Login/Signup System
 
