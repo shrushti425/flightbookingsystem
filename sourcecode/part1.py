@@ -14,19 +14,25 @@ while(1>0):
         name=input('Enter your full name\n')
         users_fullnames.append(name)
         print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n")
-        x=0
-        while(x!=1):
+        while c!=1 and d!=1 and e!=1:
             passkey=getpass.getpass('Password Please:\n')
-             
-        
-            if '!@#$%^&*-()_+=`~[]}{;:"?.><' in passkey and '1234567890' in passkey and 'QWERTYUIOPASDFGHJKLZXCVBNM' in passkey:
-                print("Your account has been created!\n")
-                userpasswords.append(passkey)
-                a+=1
-                x=1
-            else:
-                print('Weak Password:\nCheck,Does your password contain:\n#A special character\n#A number\n#An uppercase character')
-                print('Try Again!\n')       
+            l1=['0','1','2','3','4','5','6','7','8','9']
+            l2=['!','@','#','$','%','^','&','*',')','(','-','_','+','=','{','}','[',']',':',';','"','?','/','.','>','<','~',',','`']
+            l3=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+            for i in l1:
+                if i in passkey:
+                    c==1
+                    break
+            for i in l2:
+                if i in passkey:
+                    d==1
+                    break
+            for i in l3:
+                if i in passkey:
+                    e==1
+                    break
+         
+            
         
         b=int(input(print('Enter 2 to Login!')))
     if b==2:
