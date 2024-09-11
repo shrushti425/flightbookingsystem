@@ -31,9 +31,8 @@ while(1>0):
                 if i in passkey:
                     e==1
                     break
-         
-            
-        
+        userpasswords.append(passkey)
+        print("Your account has been created!") 
         b=int(input(print('Enter 2 to Login!')))
     if b==2:
         name=input('Enter your email id')
