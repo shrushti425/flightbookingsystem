@@ -5,14 +5,16 @@ while(1>0):
     userpasswords=[]
     useremails=[]
     print("Before proceeding with the Booking process:\n\nSign Up if its your first time on our site or Login\n")
-    b=int(input('Press 1 for SignUp and 2 for login\n'))
+    b=input('Press 1 for SignUp and 2 for login\n')
     c=0
     d=0
     e=0
     a=0
-    if b==1:
+    if b=='1':
         name=input('Enter your full name\n')
         users_fullnames.append(name)
+        email=input('Enter your email id\n')
+        useremails.append(email)
         print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n")
         while c!=1 and d!=1 and e!=1:
             passkey=getpass.getpass('Password Please:\n')
@@ -21,20 +23,20 @@ while(1>0):
             l3=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
             for i in l1:
                 if i in passkey:
-                    c==1
+                    c=1
                     break
             for i in l2:
                 if i in passkey:
-                    d==1
+                    d=1
                     break
             for i in l3:
                 if i in passkey:
-                    e==1
+                    e=1
                     break
         userpasswords.append(passkey)
         print("Your account has been created!") 
-        b=int(input(print('Enter 2 to Login!')))
-    if b==2:
+        b=input('Enter 2 to Login!')
+    if b=='2':
         name=input('Enter your email id')
         name=name.lower()
         if name in useremails:
