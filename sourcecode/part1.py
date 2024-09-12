@@ -12,11 +12,10 @@ if b=='1':
     email=input('Enter your email id\n')
     useremails.append(email)
     print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n")
-    password=getpass.getpass('Password Please:\n')
-    flag = 0
-    j=1
-    while j
-    while True:
+    j=0
+    while j!=1:
+        password=getpass.getpass('Password Please:\n')
+        flag = 0
         if (len(password)<=8):
             flag = -1
             break
@@ -35,15 +34,14 @@ if b=='1':
         elif re.search("\s" , password):
             flag = -1
             break
+        elif flag == -1:
+            print("Not a Valid Password ")
+
         else:
             flag = 0
             print("Valid Password")
+            j=1
             break
-
-    if flag == -1:
-        print("Not a Valid Password ")
-        j=0
- 
 print("Your account has been created!") 
 userpasswords.append(password)
 b=input('Enter 2 to Login!')
