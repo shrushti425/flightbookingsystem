@@ -1,4 +1,3 @@
-import getpass
 import re
 print("\nWelcome Aboard!\n\nEvery flight has a special experience and moment associated with it and we at SushiAir make it Remarkable for you!\n")
 users_fullnames=[]
@@ -14,7 +13,7 @@ if b=='1':
     print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n")
     j=0
     while j!=1:
-        password=getpass.getpass('Password Please:\n')
+        password=input('Password Please:\n')
         flag = 0
         if (len(password)<=8):
             flag = -1
