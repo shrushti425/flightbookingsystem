@@ -10,45 +10,64 @@ if b=='1':
     users_fullnames.append(name)
     email=input('Enter your email id\n')
     useremails.append(email)
-    print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n")
+    print("Alright! Your account is almost ready let's secure it with a password\nThe password must contain:\n#Atleast one Special Character\n#Atleast one number\n#Atleast one UpperCase alphabet\n#Atleast 8 characters\n#Atleast one lower case")
     j=0
+    i=0
     while j!=1:
         password=input('Password Please:\n')
-        flag = 0
-        if (len(password)<=8):
-            flag = -1
-            break
-        elif not re.search("[a-z]", password):
-            flag = -1
-            break
-        elif not re.search("[A-Z]", password):
-            flag = -1
-            break
-        elif not re.search("[0-9]", password):
-            flag = -1
-            break
-        elif not re.search("[_@$]" , password):
-            flag = -1
-            break
-        elif re.search("\s" , password):
-            flag = -1
-            break
-        elif flag == -1:
-            print("Not a Valid Password ")
-
-        else:
+        while j!=1:
             flag = 0
-            print("Valid Password")
-            j=1
-            break
+            if (len(password)<=8):
+                flag = -1
+                s="Length is less than 8"
+                break
+            elif not re.search("[a-z]", password):
+                flag = -1
+                s="Lower case character missing"
+                break
+            elif not re.search("[A-Z]", password):
+                flag = -1
+                s="Upper case character missing"
+                break
+            elif not re.search("[0-9]", password):
+                flag = -1
+                s="Digit missing"
+                break
+            elif not re.search("[_@$]" , password):
+                flag = -1
+                s="Special character missing"
+                break
+            elif re.search("\s" , password):
+                flag = -1
+                break
+            else:
+                flag = 0
+                print("Valid Password")
+                j=1
+                break
+        if flag == -1:
+                print("Not a Valid Password ")
+                print(s)
+
 print("Your account has been created!") 
 userpasswords.append(password)
-b=input('Enter 2 to Login!')
+b=input('Enter 2 to Login!\n')
 if b=='2':
-    name=input('Enter your email id')
-    name.lower()
-    if name in useremails:
-        password=input('Enter you password')
-        if password in userpasswords:
-            print('Welcome Back!')
+    n=0
+    m=0
+    while n==0 or m==0:
+        n=0
+        m=0
+        name=input('Enter your email id\n')
+        name.lower()
+        if name in useremails:
+            n=1
+            password=input('Enter you password\n')
+            if password in userpasswords:
+                m=1
+                print('Welcome Back!\n')
+            else:
+                print("Incorrect password!\n")
+        else:
+            print("Incorrect Password\n")
 
