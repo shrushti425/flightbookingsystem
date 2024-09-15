@@ -70,4 +70,12 @@ if b=='2':
                 print("Incorrect password!\n")
         else:
             print("Incorrect Password\n")
+location=input('Enter your location!\nPune\nMumbai')
+location.lower()
+if location=='pune':
+    dubai={'jan':{1:[02.00,12.30,23.55]}}
+    
+
+
+
 
