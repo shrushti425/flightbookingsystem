@@ -17,8 +17,7 @@ This is a **solo project** split into four parts:
 ## 🧩 Part 1: Welcome and Login/Signup System
 
 ### 1️⃣ **Welcome Page**
-   - Uses **simple print statements** to greet the user and explain the booking system. 
-   - Code Structure:
+   - Uses **simple print statements** to greet the user and explain the booking system.
       
 
 ### 2️⃣ **Login/Signup Page**
