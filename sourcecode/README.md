@@ -21,8 +21,8 @@ This is a **solo project** split into four parts:
       
 
 ### 2️⃣ **Login/Signup Page**
-   - **Login**: Users are asked to enter their username and password. 
-     - The system checks if the entered credentials exist in a **list** for usernames and a **dictionary** for passwords.
+   - **Login**: Users are asked to enter their email id and password. 
+     - The system checks if the entered credentials exist in a **list** for useremails and a **dictionary** for passwords.
      - If credentials match, the user is logged in. 
      - **Conditional statements** ensure only valid users can proceed.
    - **Signup**: 
