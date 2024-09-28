@@ -60,16 +60,19 @@ if b=='2':
         m=0
         name=input('Enter your email id\n')
         name.lower()
-        if name in useremails:
-            n=1
-            password=input('Enter you password\n')
-            if password in userpasswords:
-                m=1
-                print('Welcome Back!\n')
-            else:
-                print("Incorrect password!\n")
-        else:
-            print("Incorrect Password\n")
+        password=input('Enter you password\n')
+        i=0
+        j=0
+        k=0
+        for i in useremails:
+            if name==useremails[i]:
+                for j in userpasswords:
+                    if password==userpasswords[i]:
+                        print("Welcome back")
+                        k+=1
+        if k==0:
+            print('Invalid details!Recheck you details or sign up')
+        
 location=input('Enter your location!\nPune\nMumbai')
 location.lower()
 if location=='pune':
