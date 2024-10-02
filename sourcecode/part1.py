@@ -81,8 +81,10 @@ if location=='pune':
     if destination=='dubai':
         dubai={'January':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
         print(dubai.keys())
-        date=input('Enter your Month')
-         
+        month=input('Enter your Month')
+        print(dubai[month].keys())
+        date=input("Enter your date of travel") 
+
 
     
 
