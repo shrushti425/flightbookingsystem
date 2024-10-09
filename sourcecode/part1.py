@@ -83,7 +83,14 @@ if location=='pune':
         print(dubai.keys())
         month=input('Enter your Month')
         print(dubai[month].keys())
-        date=input("Enter your date of travel") 
+        print(dubai[month].values())
+        date=input("Choose a date") 
+        print(f'Available flights on that day!{dubai[month][date].values()}')
+        
+
+        
+
+
 
 
     
