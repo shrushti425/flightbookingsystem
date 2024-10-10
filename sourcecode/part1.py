@@ -86,6 +86,29 @@ if location=='pune':
         print(dubai[month].values())
         date=input("Choose a date") 
         print(f'Available flights on that day!{dubai[month][date].values()}')
+        n=input('Which flight do you want to take? Enter the number:')
+        final=dubai[month][date][n+1]
+        print("Here are your final flight details:")
+        print(f'Date:{month}{date}')
+        print(f'Timings{final}')
+    if destination=='singapore':
+        singapore={'January':{1:{'02.00-5.00 Non-stop':16000,'12.30-7.30 Layover at Delhi international airport':10000,'23.55-2.55 Non Stop':15000},2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
+        print(singapore.keys())
+        month=input('Enter your Month')
+        print(singapore[month].keys())
+        print(singapore[month].values())
+        date=input("Choose a date") 
+        print(f'Available flights on that day!{singapore[month][date].values()}')
+        n=input('Which flight do you want to take? Enter the number:')
+        final=singapore[month][date][n+1]
+        print("Here are your final flight details:")
+        print(f'Date:{month}{date}')
+        print(f'Timings:{final}')
+        sum=singapore[month][date][n+1].value()
+        
+        
+
+    
         
 
         
