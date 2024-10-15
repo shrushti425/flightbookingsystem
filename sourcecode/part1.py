@@ -72,54 +72,61 @@ if b=='2':
                         k+=1
         if k==0:
             print('Invalid details!Recheck you details or sign up')
-        
-location=input('Enter your location!\nPune\nMumbai')
-location.lower()
-if location=='pune':
-    destination=input('Enter your destination')
-    destination.lower()
-    if destination=='dubai':
-        dubai={'January':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
-        print(dubai.keys())
-        month=input('Enter your Month')
-        print(dubai[month].keys())
-        print(dubai[month].values())
-        date=input("Choose a date") 
-        print(f'Available flights on that day!{dubai[month][date].values()}')
-        n=input('Which flight do you want to take? Enter the number:')
-        final=dubai[month][date][n+1]
-        print("Here are your final flight details:")
-        print(f'Date:{month}{date}')
-        print(f'Timings{final}')
-    if destination=='singapore':
-        singapore={'January':{1:{'02.00-5.00 Non-stop':16000,'12.30-7.30 Layover at Delhi international airport':10000,'23.55-2.55 Non Stop':15000},2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
-        print(singapore.keys())
-        month=input('Enter your Month')
-        print(singapore[month].keys())
-        print(singapore[month].values())
-        date=input("Choose a date") 
-        print(f'Available flights on that day!{singapore[month][date].values()}')
-        n=input('Which flight do you want to take? Enter the number:')
-        final=singapore[month][date][n+1]
-        print("Here are your final flight details:")
-        print(f'Date:{month}{date}')
-        print(f'Timings:{final}')
-        sum=singapore[month][date][n+1].value()
-print('Switch to business class?')
-bus=input('y for YES and n for NO')
-if bus=='y':
-    sum=sum+20000
-print('Almost there! Would you like to add some food items?')
-food=input('y for YES and n for NO')
-if food=='y':
-    print('We serve one meal and a drink according to your flight timings!Book now to get one')
-    ans=input('Enter y for Adding food and n for not adding it')
-    if ans=='y':
-        sum=sum+1500
-print('Total amount to be paid=',sum)
+n=1
+while n!=0:      
+    location=input('Enter your location!\nPune\nMumbai\n')
+    location.lower()
+    if location=='pune':
+        destination=input('Enter your destination\n')
+        destination.lower()
+        if destination=='dubai':
+            month=input('Flights available for the month of January and February\nEnter month of travel')
+            month.lower()
+            if month=='january':
+                date=int(input('Choose a date from 1-1-25 to 31-1-25'))
+                tl=['2.00-5.00','13.00-15.00','6.00-11.00(2 hours halt at Delhi International airport']
+                print(tl)
+                if date in range(1,16):
+                    sum=16000
+                    print(sum)
+                else:
+                    sum=18000
+                    print(sum)
+                age=int(input('Enter you age'))
+                if age>6:
+                    pass
+                else:
+                    sum=sum/2
+                    
+        if destination=='singapore':
+            singapore={'January':{1:{'02.00-5.00 Non-stop':16000,'12.30-7.30 Layover at Delhi international airport':10000,'23.55-2.55 Non Stop':15000},2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
+            print(singapore.keys())
+            month=input('Enter your Month')
+            print(singapore[month].keys())
+            print(singapore[month].values())
+            date=input("Choose a date") 
+            print(f'Available flights on that day!{singapore[month][date].values()}')
+            n=input('Which flight do you want to take? Enter the number:')
+            final=singapore[month][date][n+1]
+            print("Here are your final flight details:")
+            print(f'Date:{month}{date}')
+            print(f'Timings:{final}')
+            sum=singapore[month][date][n+1].value()
+    print('Switch to business class?')
+    bus=input('y for YES and n for NO')
+    if bus=='y':
+        sum=sum+20000
+    print('Almost there! Would you like to add some food items?')
+    food=input('y for YES and n for NO')
+    if food=='y':
+        print('We serve one meal and a drink according to your flight timings!Book now to get one')
+        ans=input('Enter y for Adding food and n for not adding it')
+        if ans=='y':
+            sum=sum+1500
+    print('Total amount to be paid=',sum)
+    
 
-
-        
+            
         
 
     
