@@ -109,8 +109,6 @@ print('Switch to business class?')
 bus=input('y for YES and n for NO')
 if bus=='y':
     sum=sum+20000
-else: 
-    sum=sum
 print('Almost there! Would you like to add some food items?')
 food=input('y for YES and n for NO')
 if food=='y':
@@ -119,6 +117,7 @@ if food=='y':
     if ans=='y':
         sum=sum+1500
 print('Total amount to be paid=',sum)
+
 
         
         
