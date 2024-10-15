@@ -105,6 +105,21 @@ if location=='pune':
         print(f'Date:{month}{date}')
         print(f'Timings:{final}')
         sum=singapore[month][date][n+1].value()
+print('Switch to business class?')
+bus=input('y for YES and n for NO')
+if bus=='y':
+    sum=sum+20000
+else: 
+    sum=sum
+print('Almost there! Would you like to add some food items?')
+food=input('y for YES and n for NO')
+if food=='y':
+    print('We serve one meal and a drink according to your flight timings!Book now to get one')
+    ans=input('Enter y for Adding food and n for not adding it')
+    if ans=='y':
+        sum=sum+1500
+print('Total amount to be paid=',sum)
+
         
         
 
