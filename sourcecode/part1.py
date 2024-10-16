@@ -72,31 +72,56 @@ if b=='2':
                         k+=1
         if k==0:
             print('Invalid details!Recheck you details or sign up')
-n=1
-while n!=0:      
-    location=input('Enter your location!\nPune\nMumbai\n')
-    location.lower()
-    if location=='pune':
-        destination=input('Enter your destination\n')
-        destination.lower()
-        if destination=='dubai':
-            month=input('Flights available for the month of January and February\nEnter month of travel')
-            month.lower()
-            if month=='january':
-                date=int(input('Choose a date from 1-1-25 to 31-1-25'))
-                tl=['2.00-5.00','13.00-15.00','6.00-11.00(2 hours halt at Delhi International airport']
-                print(tl)
-                if date in range(1,16):
-                    sum=16000
-                    print(sum)
-                else:
-                    sum=18000
-                    print(sum)
-                age=int(input('Enter you age'))
-                if age>6:
-                    pass
-                else:
-                    sum=sum/2
+i=0
+while(i!=1):
+    location=input('\nEnter your location:\n Pune\n Mumbai\n\n')
+    if location.lower().replace(" ","")=='pune':
+        i=1
+        j=0
+        while(j!=1):
+            destination=input('\nEnter your destination\nDubai\nSingapore\n\n')
+            if destination.lower().replace(" ","")=='dubai':
+                j=1
+                k=0
+                while(k!=1):
+                    month=input('\n**Flights available for the month of January and February**\n\nEnter month of travel\n')
+                    if month.lower().replace(" ","")=='january':
+                        k=1
+                        l=0
+                        while(l!=1):
+                            type=input('Enter O for one way and R for Round trip')
+                            if type.lower().replace(" ","")=='O':
+                                l=1
+                                date=int(input('Choose a date from 1-1-25 to 31-1-25'))
+                                tl=['2.00-5.00','13.00-15.00','6.00-11.00(2 hours halt at Delhi International airport']
+                                print(tl)
+                                if date in range(1,16):
+                                    sum=16000
+                                    print(sum)
+                                else:
+                                    sum=18000
+                                    print(sum)
+                                age=int(input('Enter you age'))
+                                if age>6:
+                                    pass
+                                else:
+                                    sum=sum/2
+                            elif type=='R':
+                                print('hi')
+                            else:
+                                print('Please Enter the correct choice!')
+                                continue
+                    else:
+                        print('Please enter the right month,bookings for the other months will be available soon!')
+                        continue
+            else:
+                print('Oops! We are currently available only in Dubai and Singapore! Please re-enter your choice')
+                continue
+                
+    else:
+        print('We are currently functional only in Pune and Mumbai! Please re-enter your choice!')
+        continue
+        
                     
         if destination=='singapore':
             singapore={'January':{1:{'02.00-5.00 Non-stop':16000,'12.30-7.30 Layover at Delhi international airport':10000,'23.55-2.55 Non Stop':15000},2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']},'February':{1:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],2:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],3:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],4:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55'],5:['02.00-5.00 Non-stop','12.30-7.30 Layover at Delhi international airport','23.55-2.55']}}
