@@ -89,23 +89,41 @@ while(i!=1):
                         k=1
                         l=0
                         while(l!=1):
-                            type=input('Enter O for one way and R for Round trip')
-                            if type.lower().replace(" ","")=='O':
+                            type=input('Enter S for one way and R for Round trip\n')
+                            if type.lower().replace(" ","")=='s':
                                 l=1
-                                date=int(input('Choose a date from 1-1-25 to 31-1-25'))
-                                tl=['2.00-5.00','13.00-15.00','6.00-11.00(2 hours halt at Delhi International airport']
-                                print(tl)
-                                if date in range(1,16):
-                                    sum=16000
-                                    print(sum)
-                                else:
-                                    sum=18000
-                                    print(sum)
-                                age=int(input('Enter you age'))
-                                if age>6:
-                                    pass
-                                else:
-                                    sum=sum/2
+                                date=int(input('Choose a date from 1-1-25 to 31-1-25\n'))
+                                tl={'2.00-5.00':15000,'13.00-15.00':16000,'6.00-11.00(2 hours halt at Delhi International airport)':18000}
+                                m=0
+                                while m!=1:
+                                    print('Available flight options are:\n')
+                                    d=1
+                                    print('Enter your choice:')
+                                    for key in tl:
+                                        print(f'({d}) for {key}')
+                                        d+=1
+                                    time=int(input())
+                                    if time==1 or time==2 or time==3:
+                                        m=1
+                                        pass
+                                    else:
+                                        continue
+                                    sum=tl.value[time-1]
+                                    print(f'Your ticket amount:{sum}')
+                                    tn=int(input('Number of tickets?'))
+                                    for i in range(1,tn+1):
+                                        pn=input('Enter name of passenger')
+                                        age=int(input('Enter your age'))
+                                        if age>6:
+                                            pass
+                                        else:
+                                            sum=sum/2
+                                        meal=input("The meal costs 5000 \nEnter 'y' for choosing meal and 'n' for not choosing it")
+                                        if meal.lower()=='y':
+                                            sum=sum+5000
+                                        else:
+                                            pass
+                                        
                             elif type=='R':
                                 print('hi')
                             else:
@@ -121,6 +139,7 @@ while(i!=1):
     else:
         print('We are currently functional only in Pune and Mumbai! Please re-enter your choice!')
         continue
+        
         
                     
         if destination=='singapore':
