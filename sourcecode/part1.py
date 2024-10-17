@@ -198,7 +198,7 @@ while(ii!=1):
                     if month.lower().replace(" ","")=='january':
                         k=1
                         date=int(input('Choose a date from 1-1-25 to 31-1-25\n'))
-                        tl={'2.00-5.00':14000,'13.00-15.00':10000,'6.00-11.00(2 hours halt at Banglore International airport)':19000}
+                        tl={'2.00-6.00':14000,'13.00-16.00':10000,'6.00-11.00(1 hours halt at Banglore International airport)':19000}
                         print('\nAvailable flight options are:\n')
                         d=1
                         for key in tl:
@@ -245,7 +245,7 @@ while(ii!=1):
                     elif month.lower().replace(" ","")=='february':
                         k=1
                         date=int(input('Choose a date from 1-2-25 to 28-2-25\n'))
-                        tl={'2.00-5.00':19000,'13.00-15.00':12000,'6.00-11.00(2 hours halt at Delhi International airport)':15000}
+                        tl={'2.00-6.00':12000,'13.00-16.00':20000,'4.00-11.00(2 hours halt at Delhi International airport)':100000}
                         print('\nAvailable flight options are:\n')
                         d=1
                         for key in tl:
@@ -416,7 +416,7 @@ while(ii!=1):
                     if month.lower().replace(" ","")=='january':
                         k=1
                         date=int(input('Choose a date from 1-1-25 to 31-1-25\n'))
-                        tl={'2.00-5.00':14000,'13.00-15.00':10000,'6.00-11.00(2 hours halt at Banglore International airport)':19000}
+                        tl={'2.00-6.00':14000,'13.00-16.00':10000,'4.00-11.00(2 hours halt at Banglore International airport)':19000}
                         print('\nAvailable flight options are:\n')
                         d=1
                         for key in tl:
@@ -463,7 +463,7 @@ while(ii!=1):
                     elif month.lower().replace(" ","")=='february':
                         k=1
                         date=int(input('Choose a date from 1-2-25 to 28-2-25\n'))
-                        tl={'2.00-5.00':19000,'13.00-15.00':12000,'6.00-11.00(2 hours halt at Delhi International airport)':15000}
+                        tl={'1.00-5.00':19000,'13.00-16.00':19000,'5.00-11.00(2 hours halt at Delhi International airport)':15000}
                         print('\nAvailable flight options are:\n')
                         d=1
                         for key in tl:
@@ -525,7 +525,7 @@ while(ii!=1):
     print('\n\n\n\n--------------------------------AIR SUSHI---------------------------------\n')
     print('Passenger name(s):')
     for i in range(1,tn+1):
-        print(f'\n {pn[i-1]}')
+        print(f'{pn[i-1]}')
     print(f'Booking email id: {email}')
     print(f'From:{location} -> To:{destination}')
     print(f'Date: {month} {date},2025')
